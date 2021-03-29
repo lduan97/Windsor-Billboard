@@ -4,7 +4,7 @@ async function main(){
      * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
      * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
      */
-    const uri = "mongodb://localhost:27017/mydb";
+    const uri = "mongodb+srv://ASE2021:WindsorBillboard@clusterase.nood0.mongodb.net/ASE_DB?retryWrites=true&w=majority";
  
 
     const client = new MongoClient(uri);
@@ -14,13 +14,42 @@ async function main(){
         await client.connect();
  
         // Make the appropriate DB calls
-        await  listDatabases(client);
+         await  listDatabases(client);
+
+        // return only the latitude and longitude field from the collection
+        const projection = { _id: 0, latitude: 1, longitude: 1 };
+        const cursor = client.db("ASE_DB").collection("map_data").find().project(projection);
+        await cursor.forEach(console.dir);
  
     } catch (e) {
         console.error(e);
-    } finally {
+    } finally { 
         await client.close();
     }
 }
+async function listDatabases(client){
+    databasesList = await client.db().admin().listDatabases();
+ 
+    console.log("Databases:");
+    databasesList.databases.forEach(db => console.log(` - ${db.name}`));
+};
 
 main().catch(console.error);
+
+
+
+/*
+async function findOneListingByName(client, latitude) {
+    // See https://mongodb.github.io/node-mongodb-native/3.6/api/Collection.html#findOne for the findOne() docs
+    const result = await client.db("ASE_DB").collection("map_data").findOne({ latitude: latitude });
+    // return only the name field
+const projection = { _id: 0, name: 1 };
+const cursor = collection.find().project(projection);
+await cursor.forEach(console.dir);
+    if (result) {
+        console.log(`Found a listing in the collection with the name '${latitude}':`);
+        console.log(result);
+    } else {
+        console.log(`No listings found with the name '${latitude}'`);
+    }
+}*/
