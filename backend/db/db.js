@@ -1,4 +1,10 @@
 var MongoClient = require('mongodb').MongoClient;
+
+MongoClient.connect("mongodb+srv://ASE2021:WindsorBillboard@clusterase.nood0.mongodb.net/ASE_DB?retryWrites=true&w=majority", (err, client) => {
+    if (err) return console.error(err)
+    console.log('Connected to Database')
+  })
+
 async function main(){
     /**
      * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
@@ -14,12 +20,12 @@ async function main(){
         await client.connect();
  
         // Make the appropriate DB calls
-         await  listDatabases(client);
+         //await  listDatabases(client);
 
         // return only the latitude and longitude field from the collection
-        const projection = { _id: 0, latitude: 1, longitude: 1 };
-        const cursor = client.db("ASE_DB").collection("map_data").find().project(projection);
-        await cursor.forEach(console.dir);
+        //const projection = { _id: 0, latitude: 1, longitude: 1 };
+        //const cursor = client.db("ASE_DB").collection("map_data").find().project(projection);
+        //await cursor.forEach(console.dir);
  
     } catch (e) {
         console.error(e);
@@ -37,7 +43,18 @@ async function listDatabases(client){
 main().catch(console.error);
 
 
-
+/**
+ * @api {function} ExecuteQuery ExecuteQuery
+ *  @apiName ExecuteQuery
+ *  @apiGroup Database
+ *  @apiDescription Excute row query in database.
+ */
+module.exports.ExecuteQuery = async function (query, parms) {
+    let knex = getContext();
+    let spRes = await knex.raw(query, parms);
+    destroyContext(knex);
+    return spRes;
+};
 /*
 async function findOneListingByName(client, latitude) {
     // See https://mongodb.github.io/node-mongodb-native/3.6/api/Collection.html#findOne for the findOne() docs

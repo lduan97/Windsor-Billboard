@@ -9,5 +9,5 @@ const userController = require('../controllers/user');
 
 
 router.get('/ping', userController.sayHello)
-
+router.get('/fetchDataFromApi', userController.fetchDataFromApi);
 module.exports = router;

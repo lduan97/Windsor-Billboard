@@ -15,6 +15,7 @@ const httpCodes = require('../util/httpCodes');
 
 const db = require('../../db/db');
 const dbQueryObj = require('../../db/query');
+const mongoDbObject = require("../../db/db");
 
 // function for the create user
 exports.sayHello = async function (req, res) {
@@ -23,5 +24,10 @@ exports.sayHello = async function (req, res) {
 
 exports.sayDBHello = async function (req, res) {
     await db.ExecuteQuery(dbQueryObj.users.all)
+    successResponse(res, Messages.say('Hi'), [])
+};
+
+exports.fetchDataFromApi = async function (req, res) {
+    console.log(mongoDbObject, '----object for the merting');
     successResponse(res, Messages.say('Hi'), [])
 };
