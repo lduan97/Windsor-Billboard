@@ -7,31 +7,25 @@ import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 })
 
 export class AppComponent {
-  @ViewChild('mapContainer', { static: false })
-  gmap!: ElementRef;
-  map!: google.maps.Map;
-  lat = 40.73061;
-  lng = -73.935242;
-
-  coordinates = new google.maps.LatLng(this.lat, this.lng);
-
-  mapOptions: google.maps.MapOptions = {
-   center: this.coordinates,
-   zoom: 8
-  };
-
-  marker = new google.maps.Marker({
-    position: this.coordinates,
-    map: this.map,
-  });
-
-  ngAfterViewInit() {
-    this.mapInitializer();
-  }
-
-  mapInitializer() {
-    this.map = new google.maps.Map(this.gmap.nativeElement, 
-    this.mapOptions);
-    this.marker.setMap(this.map);
-  }
+  lat = 21.1594627;
+  long = 73.935242;
+  zoom = 4;
+  
+  markers = [
+        {
+            lat: 21.1594627,
+            lng: 72.6822083,
+            label: 'Surat'
+        },
+        {
+            lat: 23.0204978,
+            lng: 72.4396548,
+            label: 'Ahmedabad'
+        },
+        {
+            lat: 22.2736308,
+            lng: 70.7512555,
+            label: 'Rajkot'
+        }
+    ];
  }
