@@ -1,3 +1,9 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: lato;
+}
+
 #map {
     height: 500px;
     width: 100%;
@@ -21,14 +27,26 @@
 	width: 30%;
 	margin: 0 auto;
     float: left;
-    height: 30px;
+    height: 100px;
 }   
 
 .logo img{
 
-	width: 30%;
+	width: 70%;
 	float: left;
 	display: block;
+}
+
+.windsor{
+	width: 40%;
+	float: left;
+}
+.windsor h1{
+	text-align: center;
+	color: #224d69;
+	padding: 20px;
+	background-color: #b3daff;
+	border-radius: 25px;
 }
 
 .map-content{
@@ -36,6 +54,7 @@
 	width: 75%;
 	float: left;
 	display: block;
+	padding-bottom: 20px;
 }
 
 .map-content h3{
@@ -48,7 +67,7 @@
 
 .link{
 	background: white;
-	width: 40%;
+	width: 30%;
 	float: left;
 }
 
@@ -85,11 +104,15 @@ nav ul li a{
 .menu{
 	width: 25%;
 	float: left;
+	display: block;
+	text-align: center;
+	height: 600px;
+	padding-bottom: 20px;
 }
 
 .btn-header-one{
 	border: none;
-    background-color: #ff99c2;
+    background-color: #b3ff99;
     padding: 15px 40px 15px 40px;
     cursor: pointer;
     border-radius: 10px;
@@ -101,4 +124,93 @@ nav ul li a{
 .btn-header-one:hover{
 	color: white;
 	box-shadow: -2px 2px 4px lightgrey;
+}
+
+.last{
+	width: 100%;
+	float: left;
+	background-color: #2C374C;
+	padding: 37px 0 0 0;
+}
+
+.last-content{
+	width: 60%;
+	text-align: center;
+	margin: 0 auto;
+	
+}
+
+.last-content h2{
+	font-size: 41px;
+	color: #fff;
+	font-weight: normal;
+	margin: 50px 0 20px 0;
+}
+
+.last-content p{
+	font-size: 15px;
+	color: #939495;
+	margin-bottom: 50px;
+}
+
+.form{
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 110px;
+}
+
+.form-control {
+    width: 92%;
+    float: left;
+    padding: 22px;
+    margin-bottom: 20px;
+    background: transparent;
+    border: 1px solid #999999;
+    border-radius: 6px;
+    color: #999999;
+    font-size: 15px;
+}
+
+.message {
+    width: 82%;
+    float: left;
+    padding: 55px;
+    background: transparent;
+    border: 1px solid #999999;
+    border-radius: 6px;
+    font-size: 18px;
+    color: #999999;
+}
+
+.btn-two{
+	background-color: transparent;
+	color: #f5f5f6;
+	padding: 16px 62px;
+	border: 1px solid #15a4fa;
+	float: right;
+	font-size: 18px;
+	margin-top: 20px;
+	transition: 0.2s;
+	margin-bottom: 110px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.btn-two:hover{
+
+	background-color: #15a4fa;
+}
+
+.check{
+	float: left;
+	margin-top: 28px;
+
+}
+
+label{
+	font-size: 15px;
+	color: #e0e1e3;
+	float: left;
+	margin-top: 40px;
+	margin-left: 15px;
 }

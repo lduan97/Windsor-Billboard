@@ -1,8 +1,42 @@
-<div class="container">
-    <div class="logo">
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/57462af415.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
         <img src="../assets/images/uwin_logo.jpg">
       </div>
-    <h1>Windsor - Billiboard</h1>
+      <div class = "windsor">
+        <h1>Windsor - Billiboard</h1>
+      </div>
+      
+      <div class = "link">
+        <nav class="navy">
+        
+          <ul>
+            <li><a href="https://www.facebook.com/Windsorfirefighters/" target="_blank"><i class="fab fa-facebook-f wrapper-two"></i></a></li>
+            <li><a href="https://twitter.com/windsorfire1?lang=en" target="_blank"><i class="fab fa-twitter wrapper-two"></i></a></li>
+            <li><a href="#"><i class="fab fa-google-plus-g wrapper-two"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in wrapper-two"></i></a></li>
+          </ul>
+
+        </nav>
+      </div>
+    </div>
+  </header>
+
+<div class="container">
+  <div class = "map-content">
+    
+    
     
       <agm-map 
          [latitude]='lat' 
@@ -22,3 +56,43 @@
       </agm-map>
     
   </div>
+  <div class = "menu">
+    <nav class = "navy">
+      <ul>
+        <li><button class="btn-header-one">MENU</button></li>
+        <li><button class="btn-header-one">MENU</button></li>
+        <li><button class="btn-header-one">MENU</button></li>
+        <li><button class="btn-header-one">MENU</button></li>
+      </ul>
+    </nav>
+  </div>
+  </div>
+
+  <section class="last">
+  <div class="container">
+    <div class="last-content">
+      <h2>Stay with us</h2>
+      <p>We ensure quailty & support</p>
+      
+
+      <div class="form">
+    
+        <form>
+          <input type="text" name="username" placeholder="Full Name" autocomplete="off" class="form-control">
+          <input type="email" name="email" placeholder="Email Address" autocomplete="off" class="form-control">
+          <textarea type="text" placeholder="Message" class="message"></textarea><br>
+          <input type="checkbox" style="zoom:1.5;"class="check">
+          <label>Subscribe Newsletter</label>
+        </form>
+
+        <button type="button" class="btn-two">Send</button>
+
+      </div>
+
+
+
+    </div>
+  </div>
+</section>
+</body>
+</html>
