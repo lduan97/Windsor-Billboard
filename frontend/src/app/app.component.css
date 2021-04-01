@@ -126,6 +126,51 @@ nav ul li a{
 	box-shadow: -2px 2px 4px lightgrey;
 }
 
+
+.paragraphs{
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+
+.overview{
+	width: 100%;
+	float: left;
+	text-align: center;
+	padding: 20px;
+}
+
+.motivation{
+	width: 100%;
+	float: left;
+	text-align: center;
+	padding: 20px;
+}
+
+.businessgoals{
+	width: 100%;
+	float: left;
+	text-align: center;
+	padding: 20px;
+}
+.teammembers{
+	width: 100%;
+	float: left;
+	text-align: center;
+	padding: 20px;
+	font-size: larger;
+}
+
+.paragraphs h2{
+	padding: 20px;
+	color: #224d69;
+}
+.paragraphs p {
+	padding: 20px;
+	color: #224d69;
+	background-color: #b3ff99;
+}
+
 .last{
 	width: 100%;
 	float: left;
@@ -213,4 +258,11 @@ label{
 	float: left;
 	margin-top: 40px;
 	margin-left: 15px;
+}
+.copyright {
+	width: 100%;
+	float: left;
+	display : block;
+	padding: 20px;
+
 }
