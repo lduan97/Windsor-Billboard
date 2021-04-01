@@ -95,6 +95,7 @@ nav ul li a{
     border-radius: 10px;
     box-shadow: 0 5px 15px -5px #00000070;
     transition: 0.3s;
+	margin-left: 10px;
 }
 .wrapper-two:hover{
 	color: white;
@@ -266,7 +267,7 @@ label{
 	padding: 20px;
 
 }
-.fa {  
+/* .fa {  
     width: 15px;
     padding: 20px;
     font-size: 15px;
@@ -281,7 +282,7 @@ label{
       opacity: 0.7;
   } */
 
-  .fa-facebook {
+  /* .fa-facebook {
     background: #3B5998;
   }
   .fa-twitter {
@@ -294,4 +295,7 @@ label{
 
   .fa-linkedin {
     background: #007bb5;
+  } */ 
+  a{
+	  text-decoration: none;
   }
