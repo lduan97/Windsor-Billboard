@@ -7,25 +7,25 @@ import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 })
 
 export class AppComponent {
-  lat = 21.1594627;
-  long = 73.935242;
+  lat = 42.3262055;
+  long = -82.9808741;
   zoom = 4;
   
   markers = [
         {
-            lat: 21.1594627,
-            lng: 72.6822083,
-            label: 'Surat'
+            lat: 42.2961451,
+            lng: -83.05095539999999,
+            label: '1302 Bridge Avenue, Windsor ON N9B 2N3 Windsor Ontario Canada'
         },
         {
-            lat: 23.0204978,
-            lng: 72.4396548,
-            label: 'Ahmedabad'
+          lat: 42.3186393,
+          lng: -82.9890633,
+          label: 'Franklin Street, Windsor ON N8Y Windsor Ontario Canada'
         },
         {
-            lat: 22.2736308,
-            lng: 70.7512555,
-            label: 'Rajkot'
-        }
+          lat: 42.3262055,
+          lng: -82.9808741,
+          label: '4567 Wyandotte Street East, Windsor ON N8Y 1H4 Windsor Ontario Canada'
+      }
     ];
  }
